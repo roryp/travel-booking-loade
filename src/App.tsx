@@ -1,5 +1,7 @@
+import { BookingLoader } from '@/components/BookingLoader'
+
 function App() {
-    return <div></div>
+    return <BookingLoader />
 }
 
 export default App
