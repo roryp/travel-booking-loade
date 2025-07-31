@@ -1,50 +1,66 @@
-/* Custom theme overrides for travel booking loader */
-#root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.2 0.05 250);
+@keyframes plane-fly {
+  0% {
+    transform: translateX(-100px) translateY(0px) rotate(-10deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(150px) translateY(-20px) rotate(5deg);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(400px) translateY(0px) rotate(0deg);
+    opacity: 0;
+  }
+}
 
-  --card: oklch(0.98 0.02 250);
-  --card-foreground: oklch(0.2 0.05 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.05 250);
+@keyframes building-scan {
+  0%, 100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px oklch(0.65 0.18 50 / 0.3);
+  }
+}
 
-  --primary: oklch(0.45 0.15 250);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.75 0.12 240);
-  --secondary-foreground: oklch(0.2 0.05 250);
-  --accent: oklch(0.65 0.18 50);
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(1 0 0);
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
 
-  --muted: oklch(0.96 0.02 250);
-  --muted-foreground: oklch(0.5 0.05 250);
-  --border: oklch(0.9 0.02 250);
-  --input: oklch(0.9 0.02 250);
-  --ring: oklch(0.45 0.15 250);
+@keyframes progress-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 15px 3px oklch(0.45 0.15 250 / 0.4);
+  }
+}
 
-  --radius: 0.75rem;
+.plane-animation {
+  animation: plane-fly 3s ease-in-out infinite;
+}
 
-  /* Override main.css theme variables */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
+.building-scan {
+  animation: building-scan 2s ease-in-out infinite;
+}
+
+.pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+.progress-glow {
+  animation: progress-glow 2s ease-in-out infinite;
 }
 
 @keyframes plane-fly {
