@@ -1,31 +1,31 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+
 
 @layer base {
   * {
     @apply border-border;
-  }
-}
+  0
+ 
 
-@keyframes plane-fly {
-  0% {
-    transform: translateX(-100px) translateY(0px) rotate(-10deg);
-    opacity: 0;
+    transform: transla
+  80% 
   }
-  20% {
-    opacity: 1;
+    transform: 
   }
-  50% {
-    transform: translateX(150px) translateY(-20px) rotate(5deg);
+
+  0%, 100% {
   }
-  80% {
-    opacity: 1;
+    box
+}
+@ke
+    opa
   }
-  100% {
+   
+  }
     transform: translateX(400px) translateY(0px) rotate(0deg);
     opacity: 0;
   }
-}
+ 
 
 @keyframes building-scan {
   0%, 100% {
@@ -47,55 +47,55 @@
   }
 }
 
-@keyframes progress-glow {
-  0%, 100% {
-    box-shadow: 0 0 0 0 transparent;
-  }
-  50% {
-    box-shadow: 0 0 15px 3px oklch(0.45 0.15 250 / 0.4);
-  }
+  --radius: 0.5rem;
+
+  --color-background: var(--backgrou
+  -
+  --col
+  --color-primary: var(--primary);
+  -
+ 
+
+  --color-destruct
+  --color-border: var(--border);
+ 
+
+  --radius-lg: c
+  --radius-2xl: calc(var(--radius) * 3);
 }
 
-.plane-animation {
-  animation: plane-fly 3s ease-in-out infinite;
-}
 
-.building-scan {
-  animation: building-scan 2s ease-in-out infinite;
-}
 
-.pulse-dot {
-  animation: pulse-dot 1.5s ease-in-out infinite;
-}
 
-.progress-glow {
-  animation: progress-glow 2s ease-in-out infinite;
-}
 
-:root {
-  --background: oklch(0.98 0.02 120);
-  --foreground: oklch(0.15 0.05 250);
-  
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.05 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.05 250);
-  
-  --primary: oklch(0.45 0.15 250);
-  --primary-foreground: oklch(0.98 0.02 120);
-  --secondary: oklch(0.94 0.05 120);
-  --secondary-foreground: oklch(0.15 0.05 250);
-  --accent: oklch(0.65 0.18 50);
-  --accent-foreground: oklch(0.98 0.02 120);
-  --destructive: oklch(0.65 0.18 20);
-  --destructive-foreground: oklch(0.98 0.02 120);
-  
-  --muted: oklch(0.96 0.02 120);
-  --muted-foreground: oklch(0.45 0.05 250);
-  --border: oklch(0.9 0.05 120);
-  --input: oklch(0.9 0.05 120);
-  --ring: oklch(0.45 0.15 250);
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   --radius: 0.5rem;
 }
 

@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+@import "tw-animate-css";
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+:root {
+  --background: oklch(0.98 0.01 210);
+  --foreground: oklch(0.12 0.02 210);
+
+  --card: oklch(0.95 0.02 210);
+  --card-foreground: oklch(0.12 0.02 210);
+  --popover: oklch(0.95 0.02 210);
+  --popover-foreground: oklch(0.12 0.02 210);
+
+  --primary: oklch(0.45 0.18 260);
+  --primary-foreground: oklch(0.98 0.01 210);
+  --secondary: oklch(0.92 0.02 210);
+  --secondary-foreground: oklch(0.15 0.02 210);
+  --accent: oklch(0.85 0.08 260);
+  --accent-foreground: oklch(0.15 0.02 210);
+  --destructive: oklch(0.55 0.18 15);
+  --destructive-foreground: oklch(0.98 0.01 210);
+
+  --muted: oklch(0.92 0.02 210);
+  --muted-foreground: oklch(0.45 0.02 210);
+  --border: oklch(0.88 0.02 210);
+  --input: oklch(0.88 0.02 210);
+  --ring: oklch(0.45 0.18 260);
+
+  --radius: 0.5rem;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) * 1.5);
+  --radius-xl: calc(var(--radius) * 2);
+  --radius-2xl: calc(var(--radius) * 3);
+  --radius-full: 9999px;
+}
+
+@keyframes plane-move {
+  0% {
+    transform: translateX(-100px) translateY(0px) rotate(-5deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(400px) translateY(-50px) rotate(5deg);
+    opacity: 0;
+  }
+}
+
+@keyframes building-scan {
+  0%, 100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px oklch(0.65 0.18 50 / 0.3);
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
